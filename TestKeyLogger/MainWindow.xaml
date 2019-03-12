@@ -1,0 +1,33 @@
+﻿<Window x:Class="TestKeyLogger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestKeyLogger"
+        mc:Ignorable="d"
+        Title="KeyLogger" Height="450" Width="800">
+    <Grid>
+    
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>INFO: press Ctrl+F1 to start record | press Enter to stop record | After stop record value will keep in clipboard (copied)</TextBlock>
+            <TextBlock x:Name="LbRecording"  TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Recorded Value : " VerticalAlignment="Top"/>
+                <TextBox IsReadOnly="True" Width="Auto" x:Name="LbText" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" />
+            </WrapPanel>
+          <WrapPanel>
+              <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Clipboard Value : " VerticalAlignment="Top" />
+              <TextBox IsReadOnly="True" Width="Auto" x:Name="cbText" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" />
+            </WrapPanel>
+
+
+            <TextBlock>Log</TextBlock>
+            <ScrollViewer Width="650" Height="200">
+                <TextBox IsReadOnly="True" Width="Auto" x:Name="TbLog" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" />
+            </ScrollViewer>
+           
+        </StackPanel>
+
+      
+    </Grid>
+</Window>
